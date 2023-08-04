@@ -1,7 +1,19 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/empleados",
-      "destination": "apifetchempleados.html"
+      "src": "/api/read.php",
+      "use": "vercel-php@0.3.1"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/read.php"
     },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/read"
+    }
+  ]
 }
