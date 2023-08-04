@@ -1,9 +1,10 @@
 {
-   "version": 2,
-    "functions": {
-        "api/read.php": { "runtime": "vercel-php@0.3.1" }
-    },
-    "routes": [{
-        "src": "/(.*)",
-        "dest": "/api/read.php"
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.5.2"
+    }
+  },
+  "routes": [
+    { "src": "/(.*)",  "dest": "/api/read.php" }
+    ]
 }
